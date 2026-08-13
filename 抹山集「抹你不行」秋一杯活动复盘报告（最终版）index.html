@@ -888,15 +888,15 @@ footer b{
     font-size:28px;
   }
   .grid,.grid-2,.problem-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr !important;
   }
   .chain{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr !important;
   }
-  .chain .step:nth-child(2){
+  .chain .step:nth-child(even){
     border-right:0;
   }
-  .chain .step:nth-child(-n+2){
+  .chain .step:nth-child(-n+4){
     border-bottom:1px solid var(--line);
   }
   .bar-viz{
@@ -927,7 +927,7 @@ footer b{
 
 <div class="tape" aria-hidden="true">
   <div class="tape-track">
-    <span>秋天第一杯奶茶</span><span>被记得</span><span>手写挚友名</span><span>抹你不行</span><span>苹果柚子限定</span><span>秋天第一杯奶茶</span><span>被记得</span><span>手写挚友名</span><span>抹你不行</span><span>苹果柚子限定</span>
+    <span>秋天第一杯奶茶</span><span>被记得</span><span>手写挚友名</span><span>抹你不行</span><span>苹果大红袍·抹茶茉莉·抹茶乌龙</span><span>秋天第一杯奶茶</span><span>被记得</span><span>手写挚友名</span><span>抹你不行</span><span>苹果大红袍·抹茶茉莉·抹茶乌龙</span>
   </div>
 </div>
 
@@ -991,7 +991,7 @@ footer b{
   </div>
 
   <div class="lead reveal">
-    <strong>活动回顾：</strong>「抹你不行」秋一杯活动于8月7日至8月9日开展，主题为“我亲爱的挚友xx，抹你不行”。活动以苹果柚子限定新品9.9元做引流，双杯套餐25.6元提升客单，门店通过手写杯贴让顾客写下挚友名字并拍照分享，线上以小红书、抖音双话题#抹你不行、#秋天第一杯奶茶做内容传播。活动整体围绕“写名字”这一个动作展开，目的是让“秋天的第一杯奶茶”和“被记得”发生关联。
+    <strong>活动回顾：</strong>「抹你不行」秋一杯活动于8月7日至8月9日开展，主题为“我亲爱的挚友xx，抹你不行”。活动以苹果大红袍、抹茶茉莉和抹茶乌龙9.9元做引流，双杯套餐23.9元提升客单，门店通过手写杯贴让顾客写下挚友名字并拍照分享，线上以小红书、抖音双话题#抹你不行、#秋天第一杯奶茶做内容传播。活动整体围绕“写名字”这一个动作展开，目的是让“秋天的第一杯奶茶”和“被记得”发生关联。
   </div>
 
   <div class="grid" style="margin-top:22px">
@@ -1299,7 +1299,7 @@ footer b{
     </div>
   </div>
 
-  <div class="chain reveal" style="margin-top:22px">
+  <div class="chain reveal" style="margin-top:22px;grid-template-columns:repeat(5,1fr)">
     <div class="step">
       <b>原因一</b>
       <p>预热与活动期内容衔接断裂，预热内容发完后没有及时跟进活动期素材。</p>
@@ -1307,6 +1307,10 @@ footer b{
     <div class="step">
       <b>原因二</b>
       <p>标题、话题词与用户搜索习惯不一致，官方账号没有集中使用固定关键词。</p>
+    </div>
+    <div class="step">
+      <b>原因三</b>
+      <p>内容发布没有排班，存在断更空档，话题热度无法连续累积。</p>
     </div>
     <div class="step">
       <b>影响</b>
@@ -1334,7 +1338,7 @@ footer b{
     <strong>4.1 门店执行：活动信息传达未对齐。</strong>不同门店对活动规则的理解不一致，顾客在不同门店得到的答复不同，个别门店甚至出现规则说错、顾客反复询问的情况。
   </div>
 
-  <div class="chain reveal" style="margin-top:22px">
+  <div class="chain reveal" style="margin-top:22px;grid-template-columns:repeat(5,1fr)">
     <div class="step">
       <b>原因一</b>
       <p>细案最终版敲定过晚，留给门店学习和消化的时间不足。</p>
@@ -1342,6 +1346,10 @@ footer b{
     <div class="step">
       <b>原因二</b>
       <p>活动规则在筹备期频繁更改，门店按旧规则完成培训后又需要重来。</p>
+    </div>
+    <div class="step">
+      <b>原因三</b>
+      <p>总部到店长的传达链路过长，店长没有逐条向店员确认理解，信息在中间环节衰减。</p>
     </div>
     <div class="step">
       <b>影响</b>
@@ -1398,7 +1406,7 @@ footer b{
     </div>
   </div>
 
-  <div class="problem-grid">
+  <div class="problem-grid" style="grid-template-columns:repeat(2,1fr)">
     <div class="problem reveal">
       <div class="head">
         <div class="no">问题一</div>
@@ -1425,18 +1433,6 @@ footer b{
       </div>
     </div>
 
-    <div class="problem reveal">
-      <div class="head">
-        <div class="no">问题三</div>
-        <h4>杯贴与普通订单共用一台票机，数量被挤占</h4>
-      </div>
-      <div class="body">
-        <div class="row"><b>现象</b><p>杯贴出票与普通小票共用一台票机，其他订单多时，杯贴实际可用数量不足，原计划200张/店的备量没有完整覆盖到杯贴。</p></div>
-        <div class="row"><b>原因</b><p>物料测算只算了杯贴需求，没有把票机共用、打印损耗、其他订单占用考虑进去。</p></div>
-        <div class="row"><b>影响</b><p>活动后半程杯贴断供，顾客体验受损，门店只能临时解释。</p></div>
-        <div class="row"><b>改进</b><p>杯贴改用独立小票机或独立纸卷；备量按需求数+普通订单占用+10%-15%损耗测算；活动期间每天盘点余量。</p></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1456,7 +1452,7 @@ footer b{
     <div class="card reveal">
       <span class="tag tag-amber">数据印证</span>
       <h4>低价环境叠加渠道价差</h4>
-      <p>美团优惠后单均价11.15元（-13.30%），用户实付77,839.67元，平台补贴仅2,614.21元（占优惠后成交3.25%），优惠成本主要由商家承担。顾客对小程序价格的敏感并非个例。</p>
+      <p>美团优惠后单均价11.15元（-13.30%），用户实付77,839.67元，平台补贴仅2,614.21元（占优惠后成交3.25%），优惠成本主要由商家承担。顾客对小程序价格的敏感并非个例，而是渠道价差和低价环境共同作用的结果。</p>
     </div>
   </div>
 
@@ -1526,6 +1522,7 @@ footer b{
         <div><b>数据印证</b><p>抖音搜索场景曝光占比仅9.65%，美团曝光-访问转化率13.97%（较上周期下降2.01pp），线上活跃度和承接效率均不足。</p></div>
       </div>
       <div class="full"><b>原因</b><p>内容排期缺失、关键词不统一、发布渠道单一。</p></div>
+      <div class="full"><b>影响</b><p>线上无法承接线下流量，活动声量整体偏低。</p></div>
       <div class="full"><b>改进</b><p>按内容纬度3.2的三阶段排期和关键词规范执行。</p></div>
     </div>
   </div>
